@@ -15,11 +15,13 @@
 /ApplicationCore
 install-package Ardalis.Specification
 
+/Infrastructure
+install-package Microsoft.EntityFrameworkCore -v 5.0.13
+```
 
 ### Resources
 * https://github.com/dotnet-architecture/eShopOnWeb
-
-
+* https://www.postgresql.org
 
 
 # Info
