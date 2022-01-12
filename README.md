@@ -10,6 +10,12 @@
 * UnitTests
 ```
 
+### Packages
+```
+/ApplicationCore
+install-package Ardalis.Specification
+
+
 ### Resources
 * https://github.com/dotnet-architecture/eShopOnWeb
 
