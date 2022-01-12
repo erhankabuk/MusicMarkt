@@ -12,4 +12,14 @@
 
 ### Resources
 * https://github.com/dotnet-architecture/eShopOnWeb
-* 
+
+
+
+
+# Info
+
+* This project developed as Clean(Onion) Architecture.
+
+* ApplicationCore class library has all entity classes. 
+
+* Infrastructure
