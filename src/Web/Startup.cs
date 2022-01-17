@@ -33,6 +33,7 @@ namespace Web
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>();
+
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddControllersWithViews();
         }

@@ -47,6 +47,3 @@ update-database -context AppIdentityDbContext -s Web
 
 * This project developed as Clean(Onion) Architecture.
 
-* ApplicationCore class library has all entity classes. 
-
-* Infrastructure
