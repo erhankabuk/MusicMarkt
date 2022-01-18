@@ -20,7 +20,7 @@ namespace Infrastructure.Identity
             //Create role for admin
             await roleManager.CreateAsync(new IdentityRole() { Name = AuthorizationConstants.Roles.ADMIN });
             
-            // Create users for admin and a ++demo user 
+            // Create users for admin and a demo user 
             var adminEmail = "admin@example.com";
             var userEmail = "user@example.com";
             var adminUser = new ApplicationUser() { Email = adminEmail, UserName = adminEmail, EmailConfirmed = true };

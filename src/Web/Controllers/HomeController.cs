@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Interfaces;
 using Web.Models;
 
 namespace Web.Controllers
@@ -14,17 +15,18 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationCore.Interfaces.IRepository<Product> repository;
+        private readonly IHomeViewModelService _homeViewModelService;
 
-        public HomeController(ILogger<HomeController> logger, IRepository<Product> repository)
+        public HomeController(ILogger<HomeController> logger,IHomeViewModelService homeViewModelService)
         {
             _logger = logger;
-            this.repository = repository;
+            _homeViewModelService = homeViewModelService;
+           
         }
 
         public async Task< IActionResult> Index()
         {
-            return View(await repository.ListAllAsync());
+            return View(await _homeViewModelService.GetHomeViewModelAsync());
         }
 
         public IActionResult Privacy()
