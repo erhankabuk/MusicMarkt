@@ -1,0 +1,38 @@
+﻿@model ApplicationUser
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <p>Hello @Model.UserName !</p>
+        <input type="hidden" id="userInput" value="@Model.UserName" />
+    </div>
+    <div class="row">
+        <textarea class="form-control" id="messageInput"></textarea>
+      
+
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary" id="sendButton">Send Message</button>
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+
+    <script src="~/js/chat.js"></script>
+}

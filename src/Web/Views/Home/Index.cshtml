@@ -33,23 +33,23 @@
                 <div class="card-body">
                     <h5 class="product-title" title="@item.Name">@item.Name</h5>
                     <p class="card-text">@item.PriceText</p>
-                    <a href="#" class="btn btn-block btn-primary">Contact Supplier</a>
+                    <a asp-controller="Home" asp-action="Chat" class="btn btn-block btn-primary">Contact Supplier</a>
                 </div>
             </div>
         </div>
-
     }
 </div>
 
-@section Scripts{ 
 
-<script>
-    $("#frmFilters select").change(function () {
-        $("#frmFilters").submit();
-    });
+@section Scripts{
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
 
-
-</script>
+    <script>
+        $("#frmFilters select").change(function () {
+            $("#frmFilters").submit();
+        });
+    </script>
 }
 
 
